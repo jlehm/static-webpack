@@ -33,8 +33,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             hash: true,
-            title: '',
-            myPageHeader: '',
+            title: 'static-webpack',
             template: './app/html/index.html',
             path: path.join(__dirname, "../dist/"),
             //filename: './dist/index.html' //relative to root of the application
