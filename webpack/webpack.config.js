@@ -53,6 +53,7 @@ module.exports = {
           from:'app/images',
           to:'images'
       }]),
+// why isn't this working, why do i need to rely on testing for font formats?
 /*      new CopyWebpackPlugin([{
           from:'app/fonts',
           to:'fonts'

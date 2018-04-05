@@ -2,21 +2,16 @@ body {
   background-color: #fff;
   min-width: 600px;
   padding: 20px;
-  font-family: 'AmsiPro';
+}
+h1 {
+  font-family: 'Amsi Pro Ultra';
+}
+h3 {
+  font-family: 'Amsi Pro'
 }
 .splash {
   text-align: center;
   display: block;
   margin: 0 auto;
   width: 60%;
-}
-@font-face {
-    font-family: 'AmsiPro';
-    src: url('../fonts/AmsiPro-Ultra.eot');
-    src: url('../fonts/AmsiPro-Ultra.eot?') format('embedded-opentype'),
-         url('../fonts/AmsiPro-Ultra.woff') format('woff'),
-         url('../fonts/AmsiPro-Ultra.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
 }
