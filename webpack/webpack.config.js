@@ -3,7 +3,6 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require("path");
 
 module.exports = {
-
     entry: "./app.js", //relative to root of the application
     output: {
         path: path.join(__dirname, "./dist/"),
@@ -13,24 +12,7 @@ module.exports = {
     devServer: {
       contentBase: path.join(__dirname, "./dist/")
     },
-/*  module: {
-      rules: [{
-        test:/\.html$/,
-        use: [
-          {
-            loader: 'html-loader'
-          }, {
-            loader: 'liquid-loader',
-            options: {
-                data: {
-                    apple: "this is apple"
-                }
-            }
-          }
-        ]
-      }]
-    },
-*/  module:{
+    module:{
       rules:[
         {
           test:/\.(s*)css$/,
@@ -41,20 +23,14 @@ module.exports = {
           use: [{
               loader: 'url-loader',
               options: {
-                  limit: 8000, // Convert images < 8kb to base64 strings
+                  limit: 8000, // images < 8kb converted to base64 strings
                   name: 'images/[hash]-[name].[ext]'
               }
           }]
         }
       ]
     },
-/*    plugins: [
-      new HtmlWebpackPlugin({
-          template: './app/html/index.liquid',
-          //path: path.join(__dirname, "../dist/")
-      })
-    ],
-*/  plugins: [
+    plugins: [
         new HtmlWebpackPlugin({
             hash: true,
             title: '',
@@ -68,5 +44,4 @@ module.exports = {
             to:'images'
         }])
    ]
-
 }
